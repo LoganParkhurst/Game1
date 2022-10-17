@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
 
+//might not include combat depends on if it works
 namespace Game1
 {
     internal class Combat

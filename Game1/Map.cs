@@ -165,7 +165,7 @@ namespace Game1
          This is the map of the game
          =================================
          |       |       |      |        |
-         |   6   \   7   |      \        |
+         |   7   \   6   |      \        |
          |       |       |      |   4    |
          ============/===|      |        |
          |               |      ==========
@@ -188,8 +188,8 @@ namespace Game1
         3: Bathroom
         4: Guest Room*
         5: Office
-        6: Storage closet
-        7: air lock*
+        7: Storage closet
+        6: air lock*
         8: Hall Way*
          */
     }
