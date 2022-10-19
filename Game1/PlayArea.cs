@@ -13,15 +13,6 @@ namespace Game1
         Player Player { get; set; } = new Player();
         Map Map { get; set; } = new Map();
         Combat Combat { get; set; } = new Combat();
-        public bool IsGameOver { get; set; } = false;
-        public bool FirstTime1 { get; set; } = true;
-        public bool FirstTime2 { get; set; } = true;
-        public bool FirstTime3 { get; set; } = true;
-        public bool FirstTime4 { get; set; } = true;
-        public bool FirstTime5 { get; set; } = true;
-        public bool FirstTime6 { get; set; } = true;
-        public bool FirstTime7 { get; set; } = true;
-        public bool FirstTime8 { get; set; } = true;
         public List<string> options { get; set; } = new List<string>();
 
 
@@ -37,6 +28,7 @@ namespace Game1
             WriteLine("There is a map in this game.\n= or | mean walls\n/ means a door\n@ is your current Location");
             WriteLine("Press 'ENTER' to Continue");
             ReadLine();
+            //set up inventory
             Player.Inventory.Add("Sword");
             Player.Inventory.Add("Shield");
             Player.Inventory.Add("Potion");
@@ -62,7 +54,7 @@ namespace Game1
         }
         public void Play()
         {
-            while (!IsGameOver)
+            while (!Player.IsGameOver)
             {
                 Clear();
                 if (Player.Location == 0)
@@ -107,9 +99,9 @@ namespace Game1
                 }
                 else if (Player.Location == 1)
                 {
-                    if (FirstTime1)
+                    if (Player.FirstTime1)
                     {
-                        WriteLine("As you enter the room you notice that the room is a large ball room.\nThere are many old tables. As you step in a goblin attacks you.");
+                        WriteLine("As you enter the room you notice that the room is a large ball room.\nThere are many old tables. all of the tables are set up as if there was to be a ball");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
                         Enemy enemy1 = new Enemy()
@@ -118,8 +110,37 @@ namespace Game1
                             Health = 100,
                             Attack = 10
                         };
-                        Combat.SetUp(Player, enemy1);
-                        FirstTime1 = false;
+                        //untill combat works we will keep it out
+                        //Combat.SetUp(Player, enemy1);
+                        WriteLine("There is somthing shiny in the cornner would you like to inspect the item?");
+                        options.Clear();
+                        options.Add("Yes");
+                        options.Add("No");
+                        int  PlayerYesOrNo = Utility.UserOptions(options);
+                        if(PlayerYesOrNo == 0)
+                        {
+                            WriteLine("You pick up the shiny coin");
+                            WriteLine("You picked up a Gold Coin");
+                            Player.Inventory.Add("Gold Coin");
+                        }
+                        else if(PlayerYesOrNo == 1)
+                        {
+                            WriteLine("Are you sure?");
+                            PlayerYesOrNo = -1;
+                            PlayerYesOrNo = Utility.UserOptions(options);
+                            if(PlayerYesOrNo != -1 && PlayerYesOrNo == 0)
+                            {
+                                WriteLine("You dont inspect the shiny item");
+                            }
+                            else if(PlayerYesOrNo != -1 && PlayerYesOrNo == 1)
+                            {
+                                WriteLine("You pick up the shiny coin");
+                                WriteLine("You picked up a Gold Coin");
+                                Player.Inventory.Add("Gold Coin");
+                            }
+                        }
+                        Player.FirstTime1 = false;
+                        WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
                     }
                     else
@@ -127,8 +148,8 @@ namespace Game1
                         WriteLine("You have already been here");
                     }
                     options.Clear();
-                    WriteLine(Map.map0);
-                    WriteLine("You stand in a Large open hallway with many doors");
+                    WriteLine(Map.map1);
+                    WriteLine("You stand in the dusty old ball room. the darkness seems to streach on forever.");
                     options.Add("Describe");
                     options.Add("Move");
                     options.Add("Rest");
@@ -167,6 +188,50 @@ namespace Game1
                 }
                 else if (Player.Location == 2)
                 {
+                    if (Player.FirstTime2)
+                    {
+                        WriteLine("As you open the wooden door you notice this room is well kept.");
+                        WriteLine("The room is clean and seems to have some natural light coming through a window");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                        options.Clear();
+                        WriteLine(Map.map2);
+                        WriteLine("You stand in the dusty old ball room. the darkness seems to streach on forever.");
+                        options.Add("Describe");
+                        options.Add("Move");
+                        options.Add("Rest");
+                        options.Add("Check Invintory");
+                        int Choice = Utility.UserOptions(options);
+                        if (Choice == 0)
+                        {
+                            Clear();
+                            WriteLine("");
+                            WriteLine("Press 'ENTER' to Continue");
+                            ReadLine();
+                        }
+                        else if (Choice == 1)
+                        {
+                            Movement movement = new Movement();
+                            movement.PlayerMovement(options, Player);
+                        }
+                        else if (Choice == 2)
+                        {
+                            Clear();
+                            Player.rest(options, Player);
+                        }
+                        else if (Choice == 3)
+                        {
+                            WriteLine("Your current Inventory is: ");
+                            int x = 0;
+                            foreach (string i in Player.Inventory)
+                            {
+                                WriteLine(Player.Inventory[x]);
+                                x++;
+                            }
+                            WriteLine("Press 'ENTER' to Continue");
+                            ReadLine();
+                        }
+                    }
 
                 }
                 else if (Player.Location == 3)

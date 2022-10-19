@@ -14,6 +14,16 @@ namespace Game1
         public int Health { get; set; } = 120;
         public int Attack { get; set; } = 25;
         public int Location { get; set; }
+        public bool GotKey { get; set; } = false;
+        public bool IsGameOver { get; set; } = false;
+        public bool FirstTime1 { get; set; } = true;
+        public bool FirstTime2 { get; set; } = true;
+        public bool FirstTime3 { get; set; } = true;
+        public bool FirstTime4 { get; set; } = true;
+        public bool FirstTime5 { get; set; } = true;
+        public bool FirstTime6 { get; set; } = true;
+        public bool FirstTime7 { get; set; } = true;
+        public bool FirstTime8 { get; set; } = true;
         public List<string> Inventory { get; set; } = new List<string>();
 
 

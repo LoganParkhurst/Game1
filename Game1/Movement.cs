@@ -16,7 +16,6 @@ namespace Game1
             {
                 Clear();
                 options.Clear();
-                WriteLine("You can go to Room(s):\n");
                 options.Add("1");
                 options.Add("2");
                 options.Add("3");
@@ -81,26 +80,26 @@ namespace Game1
                 WriteLine("Press 'ENTER' to Continue");
                 ReadLine();
             }
-            if (player.Location == 1 || player.Location == 2 || player.Location == 3 || player.Location == 4)
+            else if (player.Location == 1 || player.Location == 2 || player.Location == 3 || player.Location == 4)
             {
                 options.Clear();
                 options.Add("Back to the hallway");
                 options.Add("Stay here");
                 int MovementOptions = Utility.UserOptions(options);
-                if (MovementOptions == 1)
+                if (MovementOptions == 0)
                 {
                     WriteLine("You have had enough of the dusty old room so you head out");
                     player.Location = 8;
 
                 }
-                else if (MovementOptions == 2)
+                else if (MovementOptions == 1)
                 {
                     WriteLine("You decide that you want to stay in the dusty old room");
                 }
                 WriteLine("Press 'ENTER' to Continue");
                 ReadLine();
             }
-            if (player.Location == 5)
+            else if (player.Location == 5)
             {
                 options.Clear();
                 options.Add("Enter the room on the right");
@@ -137,7 +136,7 @@ namespace Game1
                     WriteLine("You decide that you want to stay in the dusty old room");
                 }
             }
-            if (player.Location == 6)
+            else if (player.Location == 6)
             {
                 options.Clear();
                 options.Add("Enter the room on the right");
@@ -188,6 +187,123 @@ namespace Game1
                     WriteLine("You decide that you want to stay in the dusty old room");
                     WriteLine("Press 'ENTER' to Continue");
                     ReadLine();
+                }
+            }
+            else if (player.Location == 8)
+            {
+                options.Clear();
+                WriteLine("You Can go to all of the doors");
+                options.Clear();
+                options.Add("1");
+                options.Add("2");
+                options.Add("3");
+                options.Add("4");
+                options.Add("5");
+                int movementOptions = Utility.UserOptions(options);
+                if (movementOptions == 0)
+                {
+                    options.Clear();
+                    WriteLine("You move to the first door on the right.\nA large wooden door with a metal handle.");
+                    WriteLine("Would you like to open the door?");
+                    options.Add("Yes");
+                    options.Add("No");
+                    int yesOrNo = Utility.UserOptions(options);
+                    if (yesOrNo == 0)
+                    {
+
+                        WriteLine("you pull the door slowly.");
+                        player.Location = 1;
+                    }
+                    else
+                    {
+                        WriteLine("You decide to not open the old dust door");
+                    }
+                }
+                else if(movementOptions == 1)
+                {
+                    options.Clear();
+                    WriteLine("You move to the first door on the right.\nA large wooden door with a metal handle. There is light coming through the bottom of the door.");
+                    WriteLine("Would you like to open the door?");
+                    options.Add("Yes");
+                    options.Add("No");
+                    int yesOrNo = Utility.UserOptions(options);
+                    if (yesOrNo == 0)
+                    {
+
+                        WriteLine("you pull the door slowly.");
+                        player.Location = 2;
+                    }
+                    else
+                    {
+                        WriteLine("You decide to not open the old dust door");
+                    }
+                }
+                else if (movementOptions == 2)
+                {
+                    options.Clear();
+                    WriteLine("You move to the second door on the right.\nA small wooden door you can see light streaming though.");
+                    WriteLine("Would you like to open the door?");
+                    options.Add("Yes");
+                    options.Add("No");
+                    int yesOrNo = Utility.UserOptions(options);
+                    if (yesOrNo == 0)
+                    {
+
+                        WriteLine("you pull the door slowly.");
+                        player.Location = 3;
+                    }
+                    else
+                    {
+                        WriteLine("You decide to not open the old dust door");
+                    }
+                }
+                else if (movementOptions == 3)
+                {
+                    options.Clear();
+                    WriteLine("This door has a flower painted on it.\n it seems to be more modern then the rest of the building.");
+                    WriteLine("Would you like to open the door?");
+                    options.Add("Yes");
+                    options.Add("No");
+                    int yesOrNo = Utility.UserOptions(options);
+                    if (yesOrNo == 0)
+                    {
+
+                        WriteLine("you pull the door slowly.");
+                        player.Location = 4;
+                    }
+                    else
+                    {
+                        WriteLine("You decide to not open the flower door");
+                    }
+                }
+                else if (movementOptions == 4)
+                {
+                    if (player.GotKey)
+                    {
+                        WriteLine("you use the key that you picked up and unlock the door."); 
+                        options.Clear();
+                        WriteLine("Would you like to open the door?");
+                        options.Add("Yes");
+                        options.Add("No");
+                        int yesOrNo = Utility.UserOptions(options);
+                        if (yesOrNo == 0)
+                        {
+
+                            WriteLine("you pull the door slowly.");
+                            player.Location = 5;
+                        }
+                        else
+                        {
+                            WriteLine("You decide to not open the old dust door");
+                        }
+                    }
+                    else
+                    {
+                        WriteLine("The door is locked");
+                        ForegroundColor = ConsoleColor.Blue;
+                        WriteLine("maybe there is a key around here");
+                        ForegroundColor = ConsoleColor.White;
+                    }
                 }
             }
         }
