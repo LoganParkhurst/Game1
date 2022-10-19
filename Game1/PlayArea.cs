@@ -104,14 +104,6 @@ namespace Game1
                         WriteLine("As you enter the room you notice that the room is a large ball room.\nThere are many old tables. all of the tables are set up as if there was to be a ball");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
-                        Enemy enemy1 = new Enemy()
-                        {
-                            Name = "Goblin",
-                            Health = 100,
-                            Attack = 10
-                        };
-                        //untill combat works we will keep it out
-                        //Combat.SetUp(Player, enemy1);
                         WriteLine("There is somthing shiny in the cornner would you like to inspect the item?");
                         options.Clear();
                         options.Add("Yes");
@@ -143,10 +135,7 @@ namespace Game1
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
                     }
-                    else
-                    {
-                        WriteLine("You have already been here");
-                    }
+                    Clear();
                     options.Clear();
                     WriteLine(Map.map1);
                     WriteLine("You stand in the dusty old ball room. the darkness seems to streach on forever.");
@@ -194,57 +183,152 @@ namespace Game1
                         WriteLine("The room is clean and seems to have some natural light coming through a window");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
-                        options.Clear();
-                        WriteLine(Map.map2);
-                        WriteLine("You stand in the dusty old ball room. the darkness seems to streach on forever.");
-                        options.Add("Describe");
-                        options.Add("Move");
-                        options.Add("Rest");
-                        options.Add("Check Invintory");
-                        int Choice = Utility.UserOptions(options);
-                        if (Choice == 0)
-                        {
-                            Clear();
-                            WriteLine("");
-                            WriteLine("Press 'ENTER' to Continue");
-                            ReadLine();
-                        }
-                        else if (Choice == 1)
-                        {
-                            Movement movement = new Movement();
-                            movement.PlayerMovement(options, Player);
-                        }
-                        else if (Choice == 2)
-                        {
-                            Clear();
-                            Player.rest(options, Player);
-                        }
-                        else if (Choice == 3)
-                        {
-                            WriteLine("Your current Inventory is: ");
-                            int x = 0;
-                            foreach (string i in Player.Inventory)
-                            {
-                                WriteLine(Player.Inventory[x]);
-                                x++;
-                            }
-                            WriteLine("Press 'ENTER' to Continue");
-                            ReadLine();
-                        }
                     }
-
+                    Clear();
+                    options.Clear();
+                    WriteLine(Map.map2);
+                    WriteLine("You stand in the well pereserved room. the light is strangly relaxing.");
+                    options.Add("Describe");
+                    options.Add("Move");
+                    options.Add("Rest");
+                    options.Add("Check Invintory");
+                    int Choice = Utility.UserOptions(options);
+                    if (Choice == 0)
+                    {
+                        Clear();
+                        WriteLine("");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                    }
+                    else if (Choice == 1)
+                    {
+                        Movement movement = new Movement();
+                        movement.PlayerMovement(options, Player);
+                    }
+                    else if (Choice == 2)
+                    {
+                        Clear();
+                        Player.rest(options, Player);
+                    }
+                    else if (Choice == 3)
+                    {
+                        WriteLine("Your current Inventory is: ");
+                        int x = 0;
+                        foreach (string i in Player.Inventory)
+                        {
+                            WriteLine(Player.Inventory[x]);
+                            x++;
+                        }
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                    }
                 }
                 else if (Player.Location == 3)
                 {
-
+                    if (Player.FirstTime3)
+                    {
+                        WriteLine("You open the small wooden door and now stand in what you assume is a servent's quarters.");
+                        WriteLine("There are many drawers and a few bunk beds");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                    }
+                    options.Clear();
+                    WriteLine(Map.map2);
+                    WriteLine("You stand in the servent's quarters");
+                    options.Add("Describe");
+                    options.Add("Search");
+                    options.Add("Move");
+                    options.Add("Rest");
+                    options.Add("Check Invintory");
+                    int Choice = Utility.UserOptions(options);
+                    if (Choice == 0)
+                    {
+                        Clear();
+                        WriteLine("");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                    }
+                    else if (Choice == 1)
+                    {
+                        WriteLine("There are many drawers. so you get to work looking through");
+                    }
+                    else if (Choice == 2)
+                    {
+                        Movement movement = new Movement();
+                        movement.PlayerMovement(options, Player);
+                    }
+                    else if (Choice == 3)
+                    {
+                        Clear();
+                        Player.rest(options, Player);
+                    }
+                    else if (Choice == 4)
+                    {
+                        WriteLine("Your current Inventory is: ");
+                        int x = 0;
+                        foreach (string i in Player.Inventory)
+                        {
+                            WriteLine(Player.Inventory[x]);
+                            x++;
+                        }
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                    }
                 }
                 else if (Player.Location == 4)
                 {
-
+                    if (Player.FirstTime3)
+                    {
+                        WriteLine("Stepping into the room your immediately notice the plants that cover the sides of the room");
+                        WriteLine("You can make out a few books on some desks and scattered around the room");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                    }
+                    Clear();
+                    options.Clear();
+                    WriteLine(Map.map2);
+                    WriteLine("You stand in the room covered in plants");
+                    options.Add("Describe");
+                    options.Add("Move");
+                    options.Add("Rest");
+                    options.Add("Check Invintory");
+                    int Choice = Utility.UserOptions(options);
+                    if (Choice == 0)
+                    {
+                        Clear();
+                        WriteLine("");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                    }
+                    else if (Choice == 1)
+                    {
+                        Movement movement = new Movement();
+                        movement.PlayerMovement(options, Player);
+                    }
+                    else if (Choice == 2)
+                    {
+                        Clear();
+                        Player.rest(options, Player);
+                    }
+                    else if (Choice == 3)
+                    {
+                        WriteLine("Your current Inventory is: ");
+                        int x = 0;
+                        foreach (string i in Player.Inventory)
+                        {
+                            WriteLine(Player.Inventory[x]);
+                            x++;
+                        }
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                    }
                 }
                 else if (Player.Location == 5)
                 {
-
+                    if (Player.FirstTime5)
+                    {
+                        WriteLine("");
+                    }
                 }
                 else if (Player.Location == 6)
                 {
@@ -261,10 +345,10 @@ namespace Game1
 
             }
         }
-            public void GameOver()
-            {
+            //public void GameOver()
+            //{
 
-            }
+            //}
             public void Ending()
             {
 
