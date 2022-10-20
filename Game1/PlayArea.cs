@@ -155,7 +155,7 @@ namespace Game1
                     if (Choice == 0)
                     {
                         Clear();
-                        WriteLine("the room is a large ball room. all of the tables are set up as if there was to be a ball.");
+                        WriteLine("The room is a large ball room. all of the tables are set up as if there was to be a ball.");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
                     }
@@ -259,6 +259,10 @@ namespace Game1
                     else if (Choice == 1)
                     {
                         WriteLine("There are many drawers. so you get to work looking through");
+                        WriteLine("You found a key in one of the drawers");
+                        Player.Inventory.Add("Key");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
                     }
                     else if (Choice == 2)
                     {

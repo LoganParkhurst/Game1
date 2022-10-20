@@ -298,7 +298,7 @@ namespace Game1
                 }
                 else if (movementOptions == 4)
                 {
-                    if (player.GotKey)
+                    if (player.Inventory.Contains("Key"))
                     {
                         WriteLine("you use the key that you picked up and unlock the door."); 
                         options.Clear();
