@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -145,21 +146,40 @@ namespace Game1
                 int MovementOptions = Utility.UserOptions(options);
                 if (MovementOptions == 1)
                 {
-                    WriteLine("You look to the door on the right side of the room");
-                    WriteLine("Do you want to open the door?");
+                    WriteLine("You look at the vault and the keypad in the center of the door");
+                    WriteLine("Do you want to input a code to open the door? you will enter the 4 digits one by one.");
                     options.Clear();
-                    options.Add("Yes");
-                    options.Add("No");
-                    int YesOrNo = Utility.UserOptions(options);
-                    if (YesOrNo == 0)
+                    options.Add("1");
+                    options.Add("2");
+                    options.Add("3");
+                    options.Add("4");
+                    List<int> Ints = new List<int>();
+                    //password is 1324
+                    List<int> Password = new List<int>();
+                    Password.Clear();
+                    Password.Add(0);
+                    Password.Add(2);
+                    Password.Add(1);
+                    Password.Add(3);
+                    for (int i = 0; i <= 4; i++)
                     {
-                        WriteLine("you pull the door slowly.");
+                        WriteLine($"Number {i}:");
+                        int Choice = Utility.UserOptions(options);
+                        Ints.Add(Choice);
+                    }
+                    if(Ints == Password)
+                    {
+                        WriteLine("The vault door makes a loud thunk as it slowly opens");
                         player.Location = 7;
                     }
                     else
                     {
-                        WriteLine("You decide to not open the old dust door");
+                        WriteLine("All of the dials turn back to zero");
+                        ForegroundColor = ConsoleColor.Blue;
+                        WriteLine($"{player.Name}: Guess that wasn't the password");
+                        ForegroundColor = ConsoleColor.White;
                     }
+
                     WriteLine("Press 'ENTER' to Continue");
                     ReadLine();
                 }
