@@ -17,9 +17,9 @@ namespace Game1
             {
                 Clear();
                 options.Clear();
-                options.Add("1");
-                options.Add("2");
-                options.Add("3");
+                options.Add("Room 1");
+                options.Add("Room 2");
+                options.Add("Room 3");
                 int movementOptions = Utility.UserOptions(options);
                 if (movementOptions == 0)
                 {
@@ -107,7 +107,7 @@ namespace Game1
                 options.Add("Back to the hallway");
                 options.Add("Stay here");
                 int MovementOptions = Utility.UserOptions(options);
-                if (MovementOptions == 1)
+                if (MovementOptions == 0)
                 {
                     WriteLine("You look to the door on the right side of the room");
                     WriteLine("Do you want to open the door?");
@@ -118,7 +118,7 @@ namespace Game1
                     if (yesOrNo == 0)
                     {
                         WriteLine("you pull the door slowly.");
-                        player.Location = 7;
+                        player.Location = 6;
                     }
                     else
                     {
@@ -127,12 +127,12 @@ namespace Game1
                     WriteLine("Press 'ENTER' to Continue");
                     ReadLine();
                 }
-                else if (MovementOptions == 2)
+                else if (MovementOptions == 1)
                 {
-                    WriteLine("You have had enough of the dusty old room so you head out");
+                    WriteLine("You have had enough of the dusty old room so you head out to the hallway");
                     player.Location = 8;
                 }
-                else if (MovementOptions == 3)
+                else if (MovementOptions == 2)
                 {
                     WriteLine("You decide that you want to stay in the dusty old room");
                 }
@@ -209,16 +209,35 @@ namespace Game1
                     ReadLine();
                 }
             }
+            else if (player.Location == 7)
+            {
+                options.Clear();
+                options.Add("Back to the hallway");
+                options.Add("Stay here");
+                int MovementOptions = Utility.UserOptions(options);
+                if (MovementOptions == 0)
+                {
+                    WriteLine("You have gotten the gold so you are out of here");
+                    player.Location = 8;
+
+                }
+                else if (MovementOptions == 1)
+                {
+                    WriteLine("You decide that you want to stay in the dusty old room");
+                }
+                WriteLine("Press 'ENTER' to Continue");
+                ReadLine();
+            }
             else if (player.Location == 8)
             {
                 options.Clear();
                 WriteLine("You Can go to all of the doors");
                 options.Clear();
-                options.Add("1");
-                options.Add("2");
-                options.Add("3");
-                options.Add("4");
-                options.Add("5");
+                options.Add("Room 1");
+                options.Add("Room 2");
+                options.Add("Room 3");
+                options.Add("Room 4");
+                options.Add("Room 5");
                 int movementOptions = Utility.UserOptions(options);
                 if (movementOptions == 0)
                 {
@@ -238,6 +257,8 @@ namespace Game1
                     {
                         WriteLine("You decide to not open the old dust door");
                     }
+                    WriteLine("Press 'ENTER' to Continue");
+                    ReadLine();
                 }
                 else if(movementOptions == 1)
                 {
@@ -257,6 +278,8 @@ namespace Game1
                     {
                         WriteLine("You decide to not open the old dust door");
                     }
+                    WriteLine("Press 'ENTER' to Continue");
+                    ReadLine();
                 }
                 else if (movementOptions == 2)
                 {
@@ -276,6 +299,8 @@ namespace Game1
                     {
                         WriteLine("You decide to not open the old dust door");
                     }
+                    WriteLine("Press 'ENTER' to Continue");
+                    ReadLine();
                 }
                 else if (movementOptions == 3)
                 {
@@ -295,6 +320,8 @@ namespace Game1
                     {
                         WriteLine("You decide to not open the flower door");
                     }
+                    WriteLine("Press 'ENTER' to Continue");
+                    ReadLine();
                 }
                 else if (movementOptions == 4)
                 {
@@ -316,13 +343,17 @@ namespace Game1
                         {
                             WriteLine("You decide to not open the old dust door");
                         }
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
                     }
                     else
                     {
                         WriteLine("The door is locked");
                         ForegroundColor = ConsoleColor.Blue;
-                        WriteLine("maybe there is a key around here");
+                        WriteLine($"{player.Name}: maybe there is a key around here");
                         ForegroundColor = ConsoleColor.White;
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
                     }
                 }
             }

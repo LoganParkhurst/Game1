@@ -73,12 +73,12 @@ namespace Game1
                     options.Add("Describe");
                     options.Add("Move");
                     options.Add("Rest");
-                    options.Add("Check Invintory");
+                    //options.Add("Check Invintory");
                     int Choice = Utility.UserOptions(options);
                     if (Choice == 0)
                     {
                         Clear();
-                        WriteLine("");
+                        WriteLine("You stand in the start of the hallway");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
                     }
@@ -92,18 +92,10 @@ namespace Game1
                         Clear();
                         Player.rest(options, Player);
                     }
-                    else if (Choice == 3)
+                    /*else if (Choice == 3)
                     {
-                        WriteLine("Your current Inventory is: ");
-                        int x = 0;
-                        foreach (string i in Player.Inventory)
-                        {
-                            WriteLine(Player.Inventory[x]);
-                            x++;
-                        }
-                        WriteLine("Press 'ENTER' to Continue");
-                        ReadLine();
-                    }
+                        Player.CheckInventory(Player);
+                    }*/
                 }
                 else if (Player.Location == 1)
                 {
@@ -171,15 +163,7 @@ namespace Game1
                     }
                     else if (Choice == 3)
                     {
-                        WriteLine("Your current Inventory is: ");
-                        int x = 0;
-                        foreach (string i in Player.Inventory)
-                        {
-                            WriteLine(Player.Inventory[x]);
-                            x++;
-                        }
-                        WriteLine("Press 'ENTER' to Continue");
-                        ReadLine();
+                        Player.CheckInventory(Player);
                     }
 
                 }
@@ -191,6 +175,7 @@ namespace Game1
                         WriteLine("The room is clean and seems to have some natural light coming through a window");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
+                        Player.FirstTime2 = false;
                     }
                     Clear();
                     options.Clear();
@@ -220,15 +205,7 @@ namespace Game1
                     }
                     else if (Choice == 3)
                     {
-                        WriteLine("Your current Inventory is: ");
-                        int x = 0;
-                        foreach (string i in Player.Inventory)
-                        {
-                            WriteLine(Player.Inventory[x]);
-                            x++;
-                        }
-                        WriteLine("Press 'ENTER' to Continue");
-                        ReadLine();
+                        Player.CheckInventory(Player);
                     }
                 }
                 else if (Player.Location == 3)
@@ -239,6 +216,7 @@ namespace Game1
                         WriteLine("There are many drawers and a few bunk beds");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
+                        Player.FirstTime3 = false;
                     }
                     options.Clear();
                     WriteLine(Map.map3);
@@ -276,25 +254,18 @@ namespace Game1
                     }
                     else if (Choice == 4)
                     {
-                        WriteLine("Your current Inventory is: ");
-                        int x = 0;
-                        foreach (string i in Player.Inventory)
-                        {
-                            WriteLine(Player.Inventory[x]);
-                            x++;
-                        }
-                        WriteLine("Press 'ENTER' to Continue");
-                        ReadLine();
+                        Player.CheckInventory(Player);
                     }
                 }
                 else if (Player.Location == 4)
                 {
-                    if (Player.FirstTime3)
+                    if (Player.FirstTime4)
                     {
                         WriteLine("Stepping into the room your immediately notice the plants that cover the sides of the room");
                         WriteLine("You can make out a few books on some desks and scattered around the room");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
+                        Player.FirstTime4 = false;
                     }
                     Clear();
                     options.Clear();
@@ -324,15 +295,7 @@ namespace Game1
                     }
                     else if (Choice == 3)
                     {
-                        WriteLine("Your current Inventory is: ");
-                        int x = 0;
-                        foreach (string i in Player.Inventory)
-                        {
-                            WriteLine(Player.Inventory[x]);
-                            x++;
-                        }
-                        WriteLine("Press 'ENTER' to Continue");
-                        ReadLine();
+                        Player.CheckInventory(Player);
                     }
                 }
                 else if (Player.Location == 5)
@@ -342,24 +305,25 @@ namespace Game1
                         WriteLine("You step into the room and it seems to look like and office");
                         WriteLine("There is a desk at the far end of the room and a smaller door on the right side of the room");
                         WriteLine("There are some papers on the desk you might be able to read them.");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
                         Clear();
                         WriteLine("From what you could make out there are 4 poems that write");
                         //Kobayashi Issa (1763-1828)
                         WriteLine("1) In this world of ours\nWe walk on hell beneath us,\nGazing at flowers");
-
                         //Endō Atsujin (1758-1836)
                         WriteLine("2) Earth and Metal...\nAlthough my breathing ceases\nTime and tide go on.");
-
                         //Tachibana Genjiro (1665-1718)
                         WriteLine("3) I write, Erase, Write\nErase Again, and then\nA poppy blooms");
-
                         //Omoda Seiju (1771-1776)
                         WriteLine("4) Not for a moment\nDo things stand still - witness\nColour in the trees.");
-                       
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                        Player.FirstTime5 = false;
                     }
-                    options.Clear();
                     WriteLine(Map.map5);
-                    WriteLine("You stand in the room covered in plants");
+                    WriteLine("You stand in a formal office with a large desk at the far side of the room");
+                    options.Clear();
                     options.Add("Describe");
                     options.Add("Read Poems");
                     options.Add("Move");
@@ -369,7 +333,7 @@ namespace Game1
                     if (Choice == 0)
                     {
                         Clear();
-                        WriteLine("");
+                        WriteLine("There is a desk at the far end of the room and a smaller door on the right side of the room");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
                     }
@@ -387,6 +351,8 @@ namespace Game1
 
                         //Omoda Seiju (1771-1776)
                         WriteLine("4) Not for a moment\nDo things stand still - witness\nColour in the trees.");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
                     }
                     else if (Choice == 2)
                     {
@@ -400,15 +366,7 @@ namespace Game1
                     }
                     else if (Choice == 4)
                     {
-                        WriteLine("Your current Inventory is: ");
-                        int x = 0;
-                        foreach (string i in Player.Inventory)
-                        {
-                            WriteLine(Player.Inventory[x]);
-                            x++;
-                        }
-                        WriteLine("Press 'ENTER' to Continue");
-                        ReadLine();
+                        Player.CheckInventory(Player);
                     }
                 }
                 else if (Player.Location == 6)
@@ -420,6 +378,7 @@ namespace Game1
                         WriteLine("If you forget the password your hint is:\n'Flowers bloom on trees'");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
+                        Player.FirstTime6 = false;
                     }
                     Clear();
                     options.Clear();
@@ -433,7 +392,9 @@ namespace Game1
                     if (Choice == 0)
                     {
                         Clear();
-                        WriteLine("");
+                        WriteLine("You enter a small room that has a large vault");
+                        WriteLine("The vault has a small peice of paper attached it reads");
+                        WriteLine("If you forget the password your hint is:\n'Flowers bloom on trees'");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
                     }
@@ -465,16 +426,18 @@ namespace Game1
                     if (Player.FirstTime7)
                     {
                         WriteLine("You step into the vault infront of you is a pile of gold");
-                        WriteLine("after you got the gold you hear a noise from the hallway");
+                        WriteLine("after you pick up the gold you hear a noise from the hallway");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
                         Player.Inventory.Add("Big Pile of Gold");
                         Player.FirstTime7 = false;
                     }
                     else
                     {
                         WriteLine("The vault is now empty");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
                     }
-                    WriteLine("Press 'ENTER' to Continue");
-                    ReadLine();
                     options.Add("Describe");
                     options.Add("Move");
                     options.Add("Rest");
@@ -483,7 +446,7 @@ namespace Game1
                     if (Choice == 0)
                     {
                         Clear();
-                        WriteLine("");
+                        WriteLine("The vault is now empty");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
                     }
@@ -499,26 +462,25 @@ namespace Game1
                     }
                     else if (Choice == 3)
                     {
-                        WriteLine("Your current Inventory is: ");
-                        int x = 0;
-                        foreach (string i in Player.Inventory)
-                        {
-                            WriteLine(Player.Inventory[x]);
-                            x++;
-                        }
-                        WriteLine("Press 'ENTER' to Continue");
-                        ReadLine();
+                        Player.CheckInventory(Player);
                     }
                 }
                 else if (Player.Location == 8)
                 {
-                    if (Player.FirstTime8)
+                    //if (Player.FirstTime8)
+                    //{
+                    //    //only needed if I add combat back in
+                    //    WriteLine("You return to the hallway");
+                    //    Player.FirstTime8 = false;
+                    //}
+                    if(Player.Inventory.Contains("Big Pile of Gold"))
                     {
-                        //only needed if I add combat back in
-                        WriteLine("You return to the hallway");
+                        Ending();
                     }
                     WriteLine("You return to the hallway");
+                    WriteLine("Press 'ENTER' to Continue");
                     ReadLine();
+                    options.Clear();
                     options.Add("Describe");
                     options.Add("Move");
                     options.Add("Rest");
@@ -543,27 +505,23 @@ namespace Game1
                     }
                     else if (Choice == 3)
                     {
-                        WriteLine("Your current Inventory is: ");
-                        int x = 0;
-                        foreach (string i in Player.Inventory)
-                        {
-                            WriteLine(Player.Inventory[x]);
-                            x++;
-                        }
-                        WriteLine("Press 'ENTER' to Continue");
-                        ReadLine();
+                        Player.CheckInventory(Player);
                     }
                 }
 
             }
         }
-            public void GameOver()
-            {
-
-            }
-            public void Ending()
-            {
-
-            }
+        public void GameOver()
+        {
+            WriteLine("You Lost befor you could get the tressure");
+            System.Environment.Exit(0);
         }
-    } 
+        public void Ending()
+        {
+            WriteLine("You got the tressure and made it to the exit");
+            WriteLine("As you exit the building the snow has stopped.");
+            System.Environment.Exit(0);
+
+        }
+    }
+} 
