@@ -236,11 +236,21 @@ namespace Game1
                     }
                     else if (Choice == 1)
                     {
-                        WriteLine("There are many drawers. so you get to work looking through");
-                        WriteLine("You found a key in one of the drawers");
-                        Player.Inventory.Add("Key");
-                        WriteLine("Press 'ENTER' to Continue");
-                        ReadLine();
+                        if (!Player.Inventory.Contains("Key"))
+                        {
+                            WriteLine("There are many drawers. so you get to work looking through");
+                            WriteLine("You found a key in one of the drawers");
+                            Player.Inventory.Add("Key");
+                            WriteLine("Press 'ENTER' to Continue");
+                            ReadLine();
+                        }
+                        else
+                        {
+                            WriteLine("You have already searched this area you found a key\n maybe it could be used somwhere.");
+                            WriteLine("Press 'ENTER' to Continue");
+                            ReadLine();
+                        }
+                        
                     }
                     else if (Choice == 2)
                     {
@@ -339,6 +349,7 @@ namespace Game1
                     }
                     else if(Choice == 1)
                     {
+                        Clear();
                         WriteLine("From what you could make out there are 4 poems that write");
                         //Kobayashi Issa (1763-1828)
                         WriteLine("1) In this world of ours\nWe walk on hell beneath us,\nGazing at flowers");

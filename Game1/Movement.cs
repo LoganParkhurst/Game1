@@ -140,7 +140,7 @@ namespace Game1
             else if (player.Location == 6)
             {
                 options.Clear();
-                options.Add("Enter the room on the right");
+                options.Add("Atempt to open the vault");
                 options.Add("Leave");
                 options.Add("Stay here");
                 int MovementOptions = Utility.UserOptions(options);
