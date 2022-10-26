@@ -92,15 +92,22 @@ namespace Game1
                         Clear();
                         Player.rest(options, Player);
                     }
-                    /*else if (Choice == 3)
-                    {
-                        Player.CheckInventory(Player);
-                    }*/
                 }
                 else if (Player.Location == 1)
                 {
                     if (Player.FirstTime1)
                     {
+                        Enemy enemy1 = new Enemy()
+                        {
+                            Name = "Goblin",
+                            Health = 100,
+                            Attack = 10
+                        };
+                        WriteLine("Befor you could get a good look a goblin jumps out at you");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                        Combat.SetUp(Player, enemy1);
+                        
                         WriteLine("As you enter the room you notice that the room is a large ball room.\nThere are many old tables. all of the tables are set up as if there was to be a ball");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
@@ -313,6 +320,16 @@ namespace Game1
                     if (Player.FirstTime5)
                     {
                         WriteLine("You step into the room and it seems to look like and office");
+                        Enemy enemy1 = new Enemy()
+                        {
+                            Name = "Hob-Goblin",
+                            Health = 120,
+                            Attack = 15
+                        };
+                        WriteLine("Befor you could get a good look a Hob-Goblin jumps out at you");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                        Combat.SetUp(Player, enemy1);
                         WriteLine("There is a desk at the far end of the room and a smaller door on the right side of the room");
                         WriteLine("There are some papers on the desk you might be able to read them.");
                         WriteLine("Press 'ENTER' to Continue");
@@ -385,6 +402,16 @@ namespace Game1
                     if (Player.FirstTime6)
                     {
                         WriteLine("You enter a small room that has a large vault");
+                        Enemy enemy1 = new Enemy()
+                        {
+                            Name = "Goblin",
+                            Health = 100,
+                            Attack = 15
+                        };
+                        WriteLine("Befor you could get a good look a Goblin jumps out at you");
+                        WriteLine("Press 'ENTER' to Continue");
+                        ReadLine();
+                        Combat.SetUp(Player, enemy1);
                         WriteLine("The vault has a small peice of paper attached it reads");
                         WriteLine("If you forget the password your hint is:\n'Flowers bloom on trees'");
                         WriteLine("Press 'ENTER' to Continue");
