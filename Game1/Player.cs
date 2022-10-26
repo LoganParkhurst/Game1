@@ -24,7 +24,6 @@ namespace Game1
         public bool FirstTime6 { get; set; } = true;
         public bool FirstTime7 { get; set; } = true;
         public bool FirstTime8 { get; set; } = true;
-        public bool NoCombat { get; set; } = true;
         public List<string> Inventory { get; set; } = new List<string>();
 
 
@@ -32,7 +31,6 @@ namespace Game1
         {
             PlayArea playarea = new PlayArea();
             Combat combat = new Combat();
-            bool NoCombat = true;
             options.Clear();
             options.Add("30 Minutes");
             options.Add("1 Hour");

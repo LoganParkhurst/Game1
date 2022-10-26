@@ -24,7 +24,6 @@ namespace Game1
         public bool Loss { get; set; }
         public bool InCombat { get; set; }
         public Utility utility { get; set; } = new Utility();
-        public PlayArea playArea { get; set; }
         public void SetUp(Player player, Enemy enemy)
         {
             //get Player stats
@@ -45,22 +44,6 @@ namespace Game1
         }
         public void Start()
         {
-            if (PlayerHealth == 0 )
-            {
-                playArea.GameOver();
-            }
-            if (enemy1.Health == 0)
-            {
-                WriteLine($"You defeted the {EnemyName} Congrats");
-                WriteLine($"Would you like to loot the {EnemyName}? Y or N");
-                string YoN = ReadLine().ToLower();
-                if(YoN == "y")
-                {
-
-                }
-                WriteLine("press 'ENTER' to continue");
-                ReadLine();
-            }
             while(PlayerHealth > 0 && EnemyHealth > 0)
             {
                 Clear();
@@ -88,8 +71,8 @@ namespace Game1
                 {
                     Heal();
                 }
+                
             }
-            
         }
         public void Attack()
         {
@@ -98,7 +81,6 @@ namespace Game1
                 WriteLine($"As you attack the {EnemyName} for {PlayerDamage} damage, They slash back doing {EnemyDamage}");
                 EnemyHealth -= PlayerDamage;
                 PlayerHealth -= EnemyDamage;
-                Start();
 
             }
             else if(EnemyAction == "Block")
@@ -109,7 +91,6 @@ namespace Game1
                 EnemyHealth -= PlayerDamage;
                 //reset the player damage after a block
                 PlayerDamage = player1.Attack;
-                Start();
             }
         }
         public void shield()
@@ -124,7 +105,6 @@ namespace Game1
                 EnemyDamage = EnemyDamage;
                 WriteLine("press 'ENTER' to continue");
                 ReadLine();
-                Start();
             }
             else if (EnemyAction == "Block")
             {
@@ -133,7 +113,6 @@ namespace Game1
                 WriteLine("and nothing happens");
                 WriteLine("press 'ENTER' to continue");
                 ReadLine();
-                Start();
             }
         }
         public void Heal()
@@ -150,13 +129,15 @@ namespace Game1
                     PlayerHealth += HealAmount;
                     WriteLine("press 'ENTER' to continue");
                     ReadLine();
-                    Start();
+
                }
-                //they cant drink a potion if they dont have one   
-                WriteLine("You dont have a potion to drink");
-                WriteLine("press 'ENTER' to continue");
-                ReadLine();
-                Start();
+                else
+                {
+                    //they cant drink a potion if they dont have one   
+                    WriteLine("You dont have a potion to drink");
+                    WriteLine("press 'ENTER' to continue");
+                    ReadLine();
+                }
 
             }
             else if (EnemyAction == "Block")
@@ -168,13 +149,14 @@ namespace Game1
                     PlayerHealth += HealAmount;
                     WriteLine("press 'ENTER' to continue");
                     ReadLine();
-                    Start();
                 }
-                //they cant drink a potion if they dont have one   
-                WriteLine("You dont have a potion to drink");
-                WriteLine("press 'ENTER' to continue");
-                ReadLine();
-                Start();
+                else
+                {
+                    //they cant drink a potion if they dont have one   
+                    WriteLine("You dont have a potion to drink");
+                    WriteLine("press 'ENTER' to continue");
+                    ReadLine();
+                }
             }
         }
         public string GetEnemyAction()
@@ -191,5 +173,6 @@ namespace Game1
             }
             
         }
+        
     }
 }

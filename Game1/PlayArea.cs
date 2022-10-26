@@ -11,7 +11,7 @@ namespace Game1
     internal class PlayArea
     {
         Player Player { get; set; } = new Player();
-        Map Map { get; set; } = new Map();
+        Map TheMap { get; set; } = new Map();
         Combat Combat { get; set; } = new Combat();
         public List<string> options { get; set; } = new List<string>();
 
@@ -68,7 +68,7 @@ namespace Game1
                 if (Player.Location == 0)
                 {
                     options.Clear();
-                    WriteLine(Map.map0);
+                    WriteLine(TheMap.map0);
                     WriteLine("You stand in a Large open hallway with many doors");
                     options.Add("Describe");
                     options.Add("Move");
@@ -144,7 +144,7 @@ namespace Game1
                     }
                     Clear();
                     options.Clear();
-                    WriteLine(Map.map1);
+                    WriteLine(TheMap.map1);
                     WriteLine("You stand in the dusty old ball room. the darkness seems to streach on forever.");
                     options.Add("Describe");
                     options.Add("Move");
@@ -186,7 +186,7 @@ namespace Game1
                     }
                     Clear();
                     options.Clear();
-                    WriteLine(Map.map2);
+                    WriteLine(TheMap.map2);
                     WriteLine("You stand in the well pereserved room. the light is strangly relaxing.");
                     options.Add("Describe");
                     options.Add("Move");
@@ -226,7 +226,7 @@ namespace Game1
                         Player.FirstTime3 = false;
                     }
                     options.Clear();
-                    WriteLine(Map.map3);
+                    WriteLine(TheMap.map3);
                     WriteLine("You stand in the servent's quarters");
                     options.Add("Describe");
                     options.Add("Search");
@@ -286,7 +286,7 @@ namespace Game1
                     }
                     Clear();
                     options.Clear();
-                    WriteLine(Map.map4);
+                    WriteLine(TheMap.map4);
                     WriteLine("You stand in the room covered in plants");
                     options.Add("Describe");
                     options.Add("Move");
@@ -348,7 +348,7 @@ namespace Game1
                         ReadLine();
                         Player.FirstTime5 = false;
                     }
-                    WriteLine(Map.map5);
+                    WriteLine(TheMap.map5);
                     WriteLine("You stand in a formal office with a large desk at the far side of the room");
                     options.Clear();
                     options.Add("Describe");
@@ -420,7 +420,7 @@ namespace Game1
                     }
                     Clear();
                     options.Clear();
-                    WriteLine(Map.map6);
+                    WriteLine(TheMap.map6);
                     WriteLine("You stand in the small room next to the vault\nThe paper said the hint was:'Flowers bloom on trees'");
                     options.Add("Describe");
                     options.Add("Move");
