@@ -13,7 +13,7 @@ namespace Game1
         public Player player1 { get; set; }
         public Enemy enemy1 { get; set; }
         public int HealAmount { get; set; } = 50;
-        public int PlayerHealth { get; set; } 
+        public int PlayerHealth { get; set; }
         public string PlayerName { get; set; }
         public int PlayerDamage { get; set; }
         public int EnemyHealth { get; set; }
@@ -40,9 +40,9 @@ namespace Game1
             Victory = false;
             Loss = false;
             //start Combat
-            Start();
+            Start(player);
         }
-        public void Start()
+        public void Start(Player player)
         {
             while(PlayerHealth > 0 && EnemyHealth > 0)
             {
@@ -73,6 +73,8 @@ namespace Game1
                 }
                 
             }
+            player.Health = PlayerHealth;
+            Clear();
         }
         public void Attack()
         {

@@ -68,7 +68,7 @@ namespace Game1
                 if (Player.Location == 0)
                 {
                     options.Clear();
-                    WriteLine(TheMap.map0);
+                    WriteLine(TheMap.map0 + "\n");
                     WriteLine("You stand in a Large open hallway with many doors");
                     options.Add("Describe");
                     options.Add("Move");
@@ -103,6 +103,7 @@ namespace Game1
                             Health = 100,
                             Attack = 10
                         };
+
                         WriteLine("Befor you could get a good look a goblin jumps out at you");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
@@ -144,7 +145,7 @@ namespace Game1
                     }
                     Clear();
                     options.Clear();
-                    WriteLine(TheMap.map1);
+                    WriteLine(TheMap.map1 + "\n");
                     WriteLine("You stand in the dusty old ball room. the darkness seems to streach on forever.");
                     options.Add("Describe");
                     options.Add("Move");
@@ -186,7 +187,7 @@ namespace Game1
                     }
                     Clear();
                     options.Clear();
-                    WriteLine(TheMap.map2);
+                    WriteLine(TheMap.map2 + "\n");
                     WriteLine("You stand in the well pereserved room. the light is strangly relaxing.");
                     options.Add("Describe");
                     options.Add("Move");
@@ -226,7 +227,7 @@ namespace Game1
                         Player.FirstTime3 = false;
                     }
                     options.Clear();
-                    WriteLine(TheMap.map3);
+                    WriteLine(TheMap.map3 + "\n");
                     WriteLine("You stand in the servent's quarters");
                     options.Add("Describe");
                     options.Add("Search");
@@ -286,7 +287,7 @@ namespace Game1
                     }
                     Clear();
                     options.Clear();
-                    WriteLine(TheMap.map4);
+                    WriteLine(TheMap.map4 + "\n");
                     WriteLine("You stand in the room covered in plants");
                     options.Add("Describe");
                     options.Add("Move");
@@ -348,7 +349,7 @@ namespace Game1
                         ReadLine();
                         Player.FirstTime5 = false;
                     }
-                    WriteLine(TheMap.map5);
+                    WriteLine(TheMap.map5 + "\n");
                     WriteLine("You stand in a formal office with a large desk at the far side of the room");
                     options.Clear();
                     options.Add("Describe");
@@ -420,7 +421,7 @@ namespace Game1
                     }
                     Clear();
                     options.Clear();
-                    WriteLine(TheMap.map6);
+                    WriteLine(TheMap.map6 + "\n");
                     WriteLine("You stand in the small room next to the vault\nThe paper said the hint was:'Flowers bloom on trees'");
                     options.Add("Describe");
                     options.Add("Move");
@@ -461,6 +462,9 @@ namespace Game1
                 }
                 else if (Player.Location == 7)
                 {
+                    Clear();
+                    options.Clear();
+                    WriteLine(TheMap.map7 + "\n");
                     if (Player.FirstTime7)
                     {
                         WriteLine("You step into the vault infront of you is a pile of gold");
@@ -505,13 +509,10 @@ namespace Game1
                 }
                 else if (Player.Location == 8)
                 {
-                    //if (Player.FirstTime8)
-                    //{
-                    //    //only needed if I add combat back in
-                    //    WriteLine("You return to the hallway");
-                    //    Player.FirstTime8 = false;
-                    //}
-                    if(Player.Inventory.Contains("Big Pile of Gold"))
+                    Clear();
+                    options.Clear();
+                    WriteLine(TheMap.map0+"\n");
+                    if (Player.Inventory.Contains("Big Pile of Gold"))
                     {
                         Ending();
                     }

@@ -34,6 +34,7 @@ namespace Game1
             else
             {
                 WriteLine($"Not a valid input. please input a number between 1 and {options.Count}.");
+                Thread.Sleep(3500);
                 return UserOptions(options);
             }
         }
