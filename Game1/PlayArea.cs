@@ -68,13 +68,11 @@ namespace Game1
                 if (Player.Location == 0)
                 {
                     options.Clear();
-                    WriteLine(TheMap.map0 + "\n");
-                    WriteLine("You stand in a Large open hallway with many doors");
                     options.Add("Describe");
                     options.Add("Move");
                     options.Add("Rest");
                     //options.Add("Check Invintory");
-                    int Choice = Utility.UserOptions(options);
+                    int Choice = Utility.WithImgageUserOptions(options, TheMap.map0, "You stand in a Large open hallway with many doors");
                     if (Choice == 0)
                     {
                         Clear();
@@ -145,13 +143,11 @@ namespace Game1
                     }
                     Clear();
                     options.Clear();
-                    WriteLine(TheMap.map1 + "\n");
-                    WriteLine("You stand in the dusty old ball room. the darkness seems to streach on forever.");
                     options.Add("Describe");
                     options.Add("Move");
                     options.Add("Rest");
                     options.Add("Check Invintory");
-                    int Choice = Utility.UserOptions(options);
+                    int Choice = Utility.WithImgageUserOptions(options, TheMap.map1, "You stand in the dusty old ball room. the darkness seems to streach on forever.");
                     if (Choice == 0)
                     {
                         Clear();
@@ -187,13 +183,11 @@ namespace Game1
                     }
                     Clear();
                     options.Clear();
-                    WriteLine(TheMap.map2 + "\n");
-                    WriteLine("You stand in the well pereserved room. the light is strangly relaxing.");
                     options.Add("Describe");
                     options.Add("Move");
                     options.Add("Rest");
                     options.Add("Check Invintory");
-                    int Choice = Utility.UserOptions(options);
+                    int Choice = Utility.WithImgageUserOptions(options, TheMap.map2, "You stand in the well pereserved room. the light is strangly relaxing.");
                     if (Choice == 0)
                     {
                         Clear();
@@ -226,15 +220,14 @@ namespace Game1
                         ReadLine();
                         Player.FirstTime3 = false;
                     }
+                    Clear();
                     options.Clear();
-                    WriteLine(TheMap.map3 + "\n");
-                    WriteLine("You stand in the servent's quarters");
                     options.Add("Describe");
                     options.Add("Search");
                     options.Add("Move");
                     options.Add("Rest");
                     options.Add("Check Invintory");
-                    int Choice = Utility.UserOptions(options);
+                    int Choice = Utility.WithImgageUserOptions(options, TheMap.map3, "You stand in the servent's quarters");
                     if (Choice == 0)
                     {
                         Clear();
@@ -287,13 +280,11 @@ namespace Game1
                     }
                     Clear();
                     options.Clear();
-                    WriteLine(TheMap.map4 + "\n");
-                    WriteLine("You stand in the room covered in plants");
                     options.Add("Describe");
                     options.Add("Move");
                     options.Add("Rest");
                     options.Add("Check Invintory");
-                    int Choice = Utility.UserOptions(options);
+                    int Choice = Utility.WithImgageUserOptions(options, TheMap.map4, "You stand in the room covered in plants");
                     if (Choice == 0)
                     {
                         Clear();
@@ -349,15 +340,13 @@ namespace Game1
                         ReadLine();
                         Player.FirstTime5 = false;
                     }
-                    WriteLine(TheMap.map5 + "\n");
-                    WriteLine("You stand in a formal office with a large desk at the far side of the room");
                     options.Clear();
                     options.Add("Describe");
                     options.Add("Read Poems");
                     options.Add("Move");
                     options.Add("Rest");
                     options.Add("Check Invintory");
-                    int Choice = Utility.UserOptions(options);
+                    int Choice = Utility.WithImgageUserOptions(options, TheMap.map5, "You stand in a formal office with a large desk at the far side of the room");
                     if (Choice == 0)
                     {
                         Clear();
@@ -421,13 +410,11 @@ namespace Game1
                     }
                     Clear();
                     options.Clear();
-                    WriteLine(TheMap.map6 + "\n");
-                    WriteLine("You stand in the small room next to the vault\nThe paper said the hint was:'Flowers bloom on trees'");
                     options.Add("Describe");
                     options.Add("Move");
                     options.Add("Rest");
                     options.Add("Check Invintory");
-                    int Choice = Utility.UserOptions(options);
+                    int Choice = Utility.WithImgageUserOptions(options, TheMap.map6, "You stand in the small room next to the vault\nThe paper said the hint was:'Flowers bloom on trees'");
                     if (Choice == 0)
                     {
                         Clear();
@@ -484,7 +471,7 @@ namespace Game1
                     options.Add("Move");
                     options.Add("Rest");
                     options.Add("Check Invintory");
-                    int Choice = Utility.UserOptions(options);
+                    int Choice = Utility.WithImgageUserOptions(options, TheMap.map7, "You stand in a empty vault");
                     if (Choice == 0)
                     {
                         Clear();
@@ -511,20 +498,16 @@ namespace Game1
                 {
                     Clear();
                     options.Clear();
-                    WriteLine(TheMap.map0+"\n");
                     if (Player.Inventory.Contains("Big Pile of Gold"))
                     {
                         Ending();
                     }
-                    WriteLine("You return to the hallway");
-                    WriteLine("Press 'ENTER' to Continue");
-                    ReadLine();
                     options.Clear();
                     options.Add("Describe");
                     options.Add("Move");
                     options.Add("Rest");
                     options.Add("Check Invintory");
-                    int Choice = Utility.UserOptions(options);
+                    int Choice = Utility.WithImgageUserOptions(options, TheMap.map0, "You return to the hallway");
                     if (Choice == 0)
                     {
                         Clear();

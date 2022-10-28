@@ -17,12 +17,11 @@ namespace Game1
    |  |   |  .-.  | |  .--'        |  |   / : |  | | `-' /|  |\    | (|  | '. (_/ |  .--'   \ |  | |  ||  |\    |   
    |  |   |  | |  | |  `---.       |  '--'  /('  '-'(_.-' |  | \   |  |  '--'  |  |  `---.   `'  '-'  '|  | \   |   
    `--'   `--' `--' `------'       `-------'   `-----'    `--'  `--'   `------'   `------'     `-----' `--'  `--'   ");
-            Console.WriteLine(Title);
             Console.Title = "The Dungeon";
             List<string> StartMenue = new List<string>();
             StartMenue.Add("Play");
             StartMenue.Add("Quit");
-            int Option = Utility.UserOptions(StartMenue);
+            int Option = Utility.WithImgageUserOptions(StartMenue, Title, "");
             PlayArea playarea = new PlayArea();
 
             if(Option == 0)

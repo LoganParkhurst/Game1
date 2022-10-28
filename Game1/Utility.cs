@@ -34,8 +34,40 @@ namespace Game1
             else
             {
                 WriteLine($"Not a valid input. please input a number between 1 and {options.Count}.");
-                Thread.Sleep(3500);
+                Thread.Sleep(2500);
+                Clear();
                 return UserOptions(options);
+            }
+        }
+        public static int WithImgageUserOptions(List<string> options, String Image, string Text)
+        {
+            WriteLine(Text);
+            WriteLine(Image);
+            WriteLine($"Please enter a number between 1 and {options.Count}");
+            for (int i = 0; i < options.Count; i++)
+            {
+                WriteLine($"{i + 1}) {options[i]}");
+            }
+            int result = -1;
+            try
+            {
+                result = int.Parse(ReadLine());
+                result--;
+            }
+            catch (Exception)
+            {
+
+            }
+            if (result >= 0 && result < options.Count)
+            {
+                return result;
+            }
+            else
+            {
+                WriteLine($"Not a valid input. please input a number between 1 and {options.Count}.");
+                Thread.Sleep(2500);
+                Clear();
+                return WithImgageUserOptions(options, Image, Text);
             }
         }
     }
