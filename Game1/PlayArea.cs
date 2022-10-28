@@ -13,7 +13,7 @@ namespace Game1
         Player Player { get; set; } = new Player();
         Map TheMap { get; set; } = new Map();
         Combat Combat { get; set; } = new Combat();
-        public List<string> options { get; set; } = new List<string>();
+        public List<string> options { get; set; } = new List<string>(); //make the options list it will be used a LOT
 
 
 
@@ -62,16 +62,22 @@ namespace Game1
         }
         public void Play()
         {
+            //As long as the game isn't over the game doesn't end
             while (!Player.IsGameOver)
             {
+                //start of the main game loop
                 Clear();
+                //checking to see what the player location is. by defalt it is set to 0
                 if (Player.Location == 0)
                 {
+                    //clear our options list
                     options.Clear();
+                    //add what options we want
                     options.Add("Describe");
                     options.Add("Move");
                     options.Add("Rest");
-                    //options.Add("Check Invintory");
+                    options.Add("Check Invintory");
+                    //send to a modified version of our option class from class to find out what the user wants to do
                     int Choice = Utility.WithImgageUserOptions(options, TheMap.map0, "You stand in a Large open hallway with many doors");
                     if (Choice == 0)
                     {
@@ -95,21 +101,24 @@ namespace Game1
                 {
                     if (Player.FirstTime1)
                     {
+                        //create a new enemy
                         Enemy enemy1 = new Enemy()
                         {
+                            //add the stats to the new enemy
                             Name = "Goblin",
                             Health = 100,
                             Attack = 10
                         };
-
                         WriteLine("Befor you could get a good look a goblin jumps out at you");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
+                        //sends the player to a combat class
                         Combat.SetUp(Player, enemy1);
                         
                         WriteLine("As you enter the room you notice that the room is a large ball room.\nThere are many old tables. all of the tables are set up as if there was to be a ball");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
+                        //added a random item that you can pick up but only when you first get in
                         WriteLine("There is somthing shiny in the cornner would you like to inspect the item?");
                         options.Clear();
                         options.Add("Yes");
@@ -126,11 +135,11 @@ namespace Game1
                             WriteLine("Are you sure?");
                             PlayerYesOrNo = -1;
                             PlayerYesOrNo = Utility.UserOptions(options);
-                            if(PlayerYesOrNo != -1 && PlayerYesOrNo == 0)
+                            if(PlayerYesOrNo == 0)
                             {
                                 WriteLine("You dont inspect the shiny item");
                             }
-                            else if(PlayerYesOrNo != -1 && PlayerYesOrNo == 1)
+                            else if(PlayerYesOrNo == 1)
                             {
                                 WriteLine("You pick up the shiny coin");
                                 WriteLine("You picked up a Gold Coin");

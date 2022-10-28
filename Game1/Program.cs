@@ -26,10 +26,12 @@ namespace Game1
 
             if(Option == 0)
             {
+                //start the game
                 playarea.Welcome();
             }
             else if (Option == 1)
             {
+                //quits the game
                 System.Environment.Exit(0);
             }
         }
