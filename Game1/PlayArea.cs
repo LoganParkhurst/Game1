@@ -327,7 +327,7 @@ namespace Game1
                             Health = 120,
                             Attack = 15
                         };
-                        WriteLine("Befor you could get a good look a Hob-Goblin jumps out at you");
+                        WriteLine("Before you could get a good look a Hob-Goblin jumps out at you");
                         WriteLine("Press 'ENTER' to Continue");
                         ReadLine();
                         Combat.SetUp(Player, enemy1);
