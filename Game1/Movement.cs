@@ -586,6 +586,258 @@ namespace Game1
                                 }
                             }
                         }
+                        else if (Choice == 1)
+                        {
+                            Choice = Utility.UserOptions(options);
+                            if (Choice == 0)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 1)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 2)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 3)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                        }
+                        else if (Choice == 2)
+                        {
+                            Choice = Utility.UserOptions(options);
+                            if (Choice == 0)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 1)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 2)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 3)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                        }
+                        else if (Choice == 3)
+                        {
+                            Choice = Utility.UserOptions(options);
+                            if (Choice == 0)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 1)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 2)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 3)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                        }
                     }
                     else if (Choice == 2)
                     {
@@ -674,11 +926,515 @@ namespace Game1
                                 }
                             }
                         }
+                        else if (Choice == 1)
+                        {
+                            Choice = Utility.UserOptions(options);
+                            if (Choice == 0)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 1)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 2)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 3)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                        }
+                        else if (Choice == 2)
+                        {
+                            Choice = Utility.UserOptions(options);
+                            if (Choice == 0)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 1)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 2)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 3)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                        }
+                        else if (Choice == 3)
+                        {
+                            Choice = Utility.UserOptions(options);
+                            if (Choice == 0)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 1)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 2)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 3)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                        }
                     }
                     else if (Choice == 3)
                     {
                         Choice = Utility.UserOptions(options);
                         if (Choice == 0)
+                        {
+                            Choice = Utility.UserOptions(options);
+                            if (Choice == 0)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 1)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 2)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 3)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                        }
+                        else if (Choice == 1)
+                        {
+                            Choice = Utility.UserOptions(options);
+                            if (Choice == 0)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 1)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 2)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 3)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                        }
+                        else if (Choice == 2)
+                        {
+                            Choice = Utility.UserOptions(options);
+                            if (Choice == 0)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 1)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 2)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                            else if (Choice == 3)
+                            {
+                                Choice = Utility.UserOptions(options);
+                                if (Choice == 0)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 1)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 2)
+                                {
+                                    VaultClosed(player);
+                                }
+                                else if (Choice == 3)
+                                {
+                                    VaultClosed(player);
+                                }
+                            }
+                        }
+                        else if (Choice == 3)
                         {
                             Choice = Utility.UserOptions(options);
                             if (Choice == 0)
